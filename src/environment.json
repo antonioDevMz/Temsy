@@ -1,3 +1,6 @@
 {
-    "example": 1
+    "deploy": 
+    {
+        "port": 1001
+    }
 }
