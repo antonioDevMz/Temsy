@@ -1,0 +1,22 @@
+{
+  "name": "temsy",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node server.js",
+    "init": "node server.js",
+    "newStart": "node_modules/.bin/babel-node server.js"
+  },
+  "author": "Misael Antonio Martinez Ramos",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.10.4"
+  }
+}
