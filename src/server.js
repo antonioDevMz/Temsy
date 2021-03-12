@@ -1,12 +1,16 @@
-import app from './config/express';
-import { dummyII } from './utils/index';
-let logg = require("./utils/index");
-let http = require("http");
+const express = require('express');
+const server  = express();
+const cors    = require('cors');
+const routers = require('./routes');
+const { deploy: { port } } = require('./environment');
 
-console.log(dummyII);
-console.log(logg);
+server.use(express.urlencoded({ extended: false }));
+server.use(express.json());
+server.use(cors());
+server.use('/zen', routers);
 
+server.listen(port, () => {
+    console.log(`server start on port ${port}`);
+});
 
-http.createServer(function(req, res){
-    res.end();
-}).listen(8080);
+module.exports = server;

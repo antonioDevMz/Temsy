@@ -5,14 +5,16 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node server.js",
+    "start": "nodemon src/server.js",
     "init": "node server.js",
     "newStart": "node_modules/.bin/babel-node server.js"
   },
   "author": "Misael Antonio Martinez Ramos",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
